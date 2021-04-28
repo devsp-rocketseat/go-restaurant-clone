@@ -1,6 +1,5 @@
-import { Box, Button, Flex, Icon, Link, Text } from '@chakra-ui/react'
-// import { Button } from '../Button'
-import { FiPlusSquare } from 'react-icons/fi'
+import { Box, Flex } from '@chakra-ui/react'
+import { Button } from '../Button'
 
 export function Header() {
   return (
@@ -13,27 +12,7 @@ export function Header() {
       >
         <img src="Logo.svg" alt="logo" />
 
-        <Link
-          borderRadius='8px'
-          bg='#39B100'
-          color='#fff'
-          display='flex'
-          align='center'
-          overflow='hidden'
-        >
-          <Text
-            as='span'
-            fontSize='16px'
-            fontWeight='semibold'
-            p='16px 24px'
-          >
-            Novo Prato
-          </Text>
-
-          <Box bg='#41C900' p='16px'>
-            <Icon as={FiPlusSquare} fontSize='24px' />
-          </Box>
-        </Link>
+        <Button>Novo Prato</Button>
       </Flex>
     </Box>
   )

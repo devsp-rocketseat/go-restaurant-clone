@@ -1,9 +1,33 @@
-import { Box } from '@chakra-ui/react'
+import { ReactNode } from 'react'
+import { Box, Icon, Link, Text } from '@chakra-ui/react'
+import { FiPlusSquare } from 'react-icons/fi'
 
-export function Button() {
+interface props {
+  children: ReactNode
+}
+
+export function Button({ children }: props) {
   return (
-    <Box w='194px' h='56px' borderRadius='lg' bg='green.600' >
+    <Link
+      borderRadius='8px'
+      bg='#39B100'
+      color='#fff'
+      display='flex'
+      align='center'
+      overflow='hidden'
+    >
+      <Text
+        as='span'
+        fontSize='16px'
+        fontWeight='semibold'
+        p='16px 24px'
+      >
+        {children}
+      </Text>
 
-    </Box>
+      <Box bg='#41C900' p='16px'>
+        <Icon as={FiPlusSquare} fontSize='24px' />
+      </Box>
+    </Link>
   )
 }
