@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { GridFoods } from '../components/GridFoods'
 import { Header } from '../components/Header'
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
 
       <Header />
 
-      <h1>Hello World</h1>
+      <GridFoods />
     </>
   )
 }
