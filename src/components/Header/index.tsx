@@ -1,7 +1,11 @@
 import { Box, Flex } from '@chakra-ui/react'
-import { Button } from '../Button'
+import { ButtonGreen } from '../ButtonGreen'
 
-export function Header() {
+interface Props {
+  openModal: () => void
+}
+
+export function Header({ openModal }: Props) {
   return (
     <Box w='100%' h='281px' bg='#C72828' pt='40px'>
       <Flex
@@ -12,7 +16,9 @@ export function Header() {
       >
         <img src="Logo.svg" alt="logo" />
 
-        <Button>Novo Prato</Button>
+        <ButtonGreen onClick={openModal}>
+          Novo Prato
+        </ButtonGreen>
       </Flex>
     </Box>
   )

@@ -4,9 +4,10 @@ import { FiPlusSquare } from 'react-icons/fi'
 
 interface props {
   children: ReactNode
+  onClick?: () => void
 }
 
-export function Button({ children }: props) {
+export function ButtonGreen({ children, onClick }: props) {
   return (
     <Link
       borderRadius='8px'
@@ -15,6 +16,7 @@ export function Button({ children }: props) {
       display='flex'
       align='center'
       overflow='hidden'
+      onClick={onClick}
     >
       <Text
         as='span'
